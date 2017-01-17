@@ -1,0 +1,52 @@
+.container-fluid {
+    border: 1px solid;
+    width: 75%;
+    margin-top: 50px;
+    padding-left: 0px;
+    padding-bottom: 20px;
+    padding-right: 0px;
+}
+
+.search {
+    margin-top: 30px;
+    border-bottom: 1px solid;
+    padding-bottom: 30px;
+    padding-left: 20px;
+}
+
+input[type=text] {
+    width: 25%;
+}
+
+.myButton {
+    padding: 7px 25px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.myButton:hover {background-color: #3e8e41}
+
+.myButton:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.row {
+    margin-left: 23px;
+}
+
+.col-sm-3 {
+    height: 130px;
+    width: 270px;
+    border: 1px solid;
+    margin: 20px 20px 0px 0px;
+    padding: 10px 10px 10px 10px;
+}

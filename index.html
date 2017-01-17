@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search Tool</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="myStylesheet.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="search_js.js"> </script>
+</head>
+
+<body ng-app="myApp">
+    <div class="container-fluid">
+        <div class="search">
+            <input type="text" ng-model="searchValue.name"> &nbsp;
+            <input type="button" class="myButton" value="Search" ng-click="mySearch(searchValue)">
+        </div>
+        <div class="row" ng-controller="myCtrl">
+            <div class="col-sm-3"
+                 ng-repeat="data in result | filter: searchValue"
+                 ng-show="searchValue.name"
+                 ng-style="{'borderColor': getColor(data.gender)}">
+                <b style="font-size: large"> Name: </b>
+                <span style="font-size: large;
+                             font-weight: bold;"
+                      ng-style="{'color': getColor(data.gender)}"> {{data.name}} </span> <br> <br>
+                <b> Email: </b> {{data.email}} <br>
+                <b> City: </b> {{data.city}}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
